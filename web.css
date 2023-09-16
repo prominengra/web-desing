@@ -1,0 +1,269 @@
+body {
+    background-color:rgb(142, 238, 238);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      position: relative;
+      
+    }
+    .title{
+        text-align: left;
+    }
+    
+    nav {
+      background-color: #6a34fc; /* Background color of the navigation bar */
+      padding: 30px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: #fff; /* Text color for the title and button */
+      position: fixed; /* This will fix position of nav bar */
+      justify-content: space-between; /* To push the title and button to the opposite sides */
+      z-index: 100;
+    }
+    
+    .navbar-left h1 {
+      margin: 0;
+    }
+    
+    .navbar-right a {
+      text-decoration: none;
+      /* background-color: #ff8809; Background color of the button */
+      color: #ffffff; /* Text color for the button */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: .5s ease;
+    }
+  
+    /* ###Content### */
+  
+    section {
+      height: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+  
+    /* Add the background image to the desired section */
+    #about {
+      color: #ec9e9e; /* Set text color for better visibility */
+      height: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: #000000;
+      font-size: 20px;
+    }
+  
+    #about a,h4{    
+      text-decoration: none;
+      color:#e64cfa; /* Text color for the button */
+      border: 3px solid #ebbcf1;
+      padding: 80px 120px;
+      border-radius: 30PX;
+      cursor: pointer;
+      transition: .5s ease;
+    }
+    .intro {
+      size: 20px;
+      margin-left: 15px;
+      color: #ffffff;
+    }
+    #about a,h4:hover{
+      text-decoration: none;
+      background-image: url('rick-roll.gif');
+      background-color: rgb(255, 255, 255);
+      color: #000000; /* Text color for the button */
+      border: 10px solid rgba(253, 253, 52, 0.795);
+      padding: 80px 120px;
+      border-radius: 30PX;
+      cursor: pointer;
+      transition: .5s;
+      
+    }
+  
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 20px;
+      width: 300px;
+      height: 300px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  
+    #c {
+      margin-right: 20px;
+    }
+    
+    .navbar-right a:hover{
+      background-color: #266afd; /* Background color of the button */
+      color: #fff; /* Text color for the button */
+      border: none;
+      transform: scale(1.2);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: .5s;
+    }
+    
+    footer {
+      color: lightcyan;
+      background-color: #394dffcb;
+      padding: 2px;
+      text-align: center;
+    }
+  
+    section:nth-child(even) {
+      background-color: #e64cfa;
+    }
+  
+    .active {
+      background-color: #0400ff;
+    }
+  
+    .inactive {
+      background-color: #e64cfa;
+    }
+    .two{
+      position: relative;
+      left: 50px;
+    }
+    .home ,.pix {
+      color: #f78a8a;
+      
+  
+      
+      
+      /*
+      animation-name: slideInLelf;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-delay: 1s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode:backwards;*/
+  
+      
+    }
+    .pix {
+      z-index: 5;
+      position: relative;
+      left: 60px;
+      bottom: 20px;
+      animation: bounce 1s infinite normal both;
+    }
+    .pic{
+      animation: pic-jump 1s 0s infinite;
+      position: relative;
+      top: 100px;
+    }
+    .pic2{
+        animation: pic-jump2 1s 0s infinite;
+        position: relative;
+        top: 100px;
+    
+  
+    }
+    @keyframes pic-jump {
+      0% {
+        transform: translateY(0%);
+        animation-timing-function: ease-out;
+      }
+      50% {
+        transform: translateY(-100%);
+        animation-timing-function: ease-in;
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    } 
+    @keyframes pic-jump2 {
+      0% {
+        transform: translateY(-100%);
+        animation-timing-function: ease-out;
+      }
+      50% {
+        transform: translateY(0%);
+        animation-timing-function: ease-in;
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    } 
+    .certi {
+      width: 500px;
+      padding: 30px;
+      
+      
+    }
+  
+    .certi:hover {
+      animation: bounce  1s  infinite normal both;
+      
+    }
+    
+    .contact {
+      object-fit: contain;
+      padding: 10px;
+    }
+    
+   
+  @keyframes slideInLeft {
+    from{
+      transform: translateX(-300px);
+  
+    }
+    to{
+      transform: translateX(0px);
+    }
+  }
+  @keyframes rotate {
+    from{
+      transform: rotate(0)
+    }
+    to{
+      transform: rotate(360deg);
+  
+    }
+  }
+  .rotate {
+    animation-name:rotate ;
+    animation-timing-function: linear;
+    transform-origin: top left;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0px);
+  
+    }
+    20%{
+      transform: translateY(-20px);
+  
+    }
+    40%{
+      transform: translateY(-40px);
+  
+    }
+    50%{
+      transform: translateY(-50px);
+    }
+    60%{
+      transform: translateY(-40px);
+  
+    }
+    80%{
+      transform: translateY(-20px);
+  
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+  
